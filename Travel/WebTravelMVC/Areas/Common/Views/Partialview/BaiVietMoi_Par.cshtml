@@ -1,0 +1,26 @@
+﻿@using WebTravelMVC.Models
+@model  IEnumerable<BaiViet>
+
+@foreach (var item in Model)
+{
+    <div class="col-lg-6">
+        <div class="right-first-image">
+            <div class="thumb">
+                <div class="inner-content">
+                    <h4>@item.TenBaiViet</h4>
+                    <span>@item.TheLoai.TenTheLoai.Substring(0, 30)</span>
+                </div>
+                <div class="hover-content">
+                    <div class="inner">
+                        <h4>@item.NgayDang</h4>
+                        <p>@item.NoiDung.Substring(0,30)</p>
+                        <div class="main-border-button">
+                            <a href="#">Xem thêm</a>
+                        </div>
+                    </div>
+                </div>
+                <img src="~/Assets/images/@item.TenBaiViet">
+            </div>
+        </div>
+    </div>
+}
