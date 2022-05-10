@@ -8,18 +8,32 @@
             <div class="thumb">
                 <div class="inner-content">
                     <h4>@item.TenBaiViet</h4>
-                    <span>@item.TheLoai.TenTheLoai.Substring(0, 30)</span>
+                    @if (item.TheLoai.TenTheLoai.Length > 30)
+                    {
+                        <span>@item.TheLoai.TenTheLoai.Substring(0, 30)</span>
+                    }
+                    else
+                    {
+                        <span>@item.TheLoai.TenTheLoai</span>
+                    }
                 </div>
                 <div class="hover-content">
                     <div class="inner">
                         <h4>@item.NgayDang</h4>
-                        <p>@item.NoiDung.Substring(0,30)</p>
+                        @if (@item.NoiDung.Length > 30)
+                        {
+                            <p>@item.NoiDung.Substring(0, 30)</p>
+                        }
+                        else
+                        {
+                            <p>@item.NoiDung</p>
+                        }
                         <div class="main-border-button">
                             <a href="#">Xem thêm</a>
                         </div>
                     </div>
                 </div>
-                <img src="~/Assets/images/@item.TenBaiViet">
+                <img src="~/Assets/images/about-left-image.jpg">
             </div>
         </div>
     </div>

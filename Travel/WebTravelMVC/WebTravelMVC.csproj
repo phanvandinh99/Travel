@@ -221,6 +221,7 @@
     <Content Include="Areas\Common\Views\Home\Index.cshtml" />
     <Content Include="Areas\Common\Views\Partialview\TheLoai_Par.cshtml" />
     <Content Include="Areas\Common\Views\Partialview\BaiVietMoi_Par.cshtml" />
+    <Content Include="Areas\Common\Views\Partialview\DiemDenHapDan_Par.cshtml" />
     <None Include="packages.config" />
     <Content Include="Views\Common\Index.cshtml" />
   </ItemGroup>

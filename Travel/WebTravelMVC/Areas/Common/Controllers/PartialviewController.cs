@@ -22,5 +22,12 @@ namespace WebTravelMVC.Areas.Common.Controllers
             var baiViet = db.BaiViets.OrderByDescending(n => n.MaBaiViet).ToList().Take(4);
             return PartialView(baiViet);
         }
+        
+        // Điểm đến hấp dẫn => like nhiều
+        public ActionResult DiemDenHapDan_Par()
+        {
+            var baiViet = db.BaiViets.OrderByDescending(n => n.LuotThich).ToList();
+            return PartialView(baiViet);
+        }
     }
 }
