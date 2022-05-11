@@ -19,21 +19,21 @@
                 </div>
                 <div class="hover-content">
                     <div class="inner">
-                        <h4>@item.NgayDang</h4>
+                        <h4>@string.Format("{0:dd/MM/yyyy}", item.NgayDang)</h4>
                         @if (@item.NoiDung.Length > 30)
                         {
-                            <p>@item.NoiDung.Substring(0, 30)</p>
+                            <span>@Html.Raw(item.NoiDung.Substring(0, 30))</span>
                         }
                         else
                         {
-                            <p>@item.NoiDung</p>
+                            <span>@Html.Raw(item.NoiDung)</span>
                         }
                         <div class="main-border-button">
-                            <a href="#">Xem thêm</a>
+                            <a href="/Common/BaiViet/XemChiTiet?iMaBaiViet=@item.MaBaiViet">Xem thêm</a>
                         </div>
                     </div>
                 </div>
-                <img src="~/Assets/images/about-left-image.jpg">
+                <img style="width:350px; height:300px" src="~/Assets/images/@item.AnhBia">
             </div>
         </div>
     </div>

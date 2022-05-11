@@ -15,6 +15,7 @@ namespace WebTravelMVC.Models
         public virtual DbSet<BaiViet> BaiViets { get; set; }
         public virtual DbSet<DanhMuc> DanhMucs { get; set; }
         public virtual DbSet<Quyen> Quyens { get; set; }
+        public virtual DbSet<sysdiagram> sysdiagrams { get; set; }
         public virtual DbSet<TaiKhoan> TaiKhoans { get; set; }
         public virtual DbSet<TheLoai> TheLoais { get; set; }
 

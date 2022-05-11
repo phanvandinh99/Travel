@@ -89,9 +89,11 @@ create table BaiViet
 	MaBaiViet int identity(1,1) primary key,
 	TenBaiViet nvarchar(200) not null,
 	NoiDung nvarchar(max) not null,
+	AnhBia nvarchar(max) null,
 	NgayDang datetime not null,
 	NgayCapNhat datetime null,
 	LuotThich int default(0) null,
+	An int null default(0), -- 0: hiển thị, 1 ẩn bài viết
 	MaTheLoai int,
 	MaTaiKhoan varchar(50),
 

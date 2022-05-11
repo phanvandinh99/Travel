@@ -19,7 +19,7 @@ namespace WebTravelMVC.Areas.Common.Controllers
         // Bài viết mới
         public ActionResult BaiVietMoi_Par()
         {
-            var baiViet = db.BaiViets.OrderByDescending(n => n.MaBaiViet).ToList().Take(4);
+            var baiViet = db.BaiViets.Where(n=>n.An==0).OrderByDescending(n => n.MaBaiViet).ToList().Take(4);
             return PartialView(baiViet);
         }
         
